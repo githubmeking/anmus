@@ -7,14 +7,13 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID","20213849"))
-API_HASH = getenv("API_HASH","e97df0eca2a9531c80202c1a7d3f5721")
+API_ID = int(getenv("API_ID",""))
+API_HASH = getenv("API_HASH","")
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN","6591274198:AAFFsE0pTw3tUE9kq49QjUBarwLaQTdjurY")
+BOT_TOKEN = getenv("BOT_TOKEN",":")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://sadbot19033:sadbotbey@cluster0.01dwa.mongodb.net/")
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
 
@@ -32,7 +31,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/AnonymousX1025/AnonXMusic",
+    "https://github.com/AnonymousX1025
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
@@ -62,13 +61,6 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @StringFatherBot on Telegram
-STRING1 = getenv("STRING_SESSION", "AgDY4YEATvn3sIR0kiN1sOLkAONRhouL-KGZtyDH-EMS-34a_muXwk60pfuL4b-uqq-MniAlll9wQRb2Fc7SVpPILHAxvp38bzLHssWLvSl0O9Evo1BtB9Pki1awykxVgeOjiVJxBaU1ynHkvm_dPhNHhYnOJMDTiqWL0v9O6UMvcpF8OS9OnbQuvsDDE-xCu7lhLMAiQb_sk-wpGYyE9bpzvb89whwUMPp1Zv-03VZZIjPUrcWU-qheggjhD7AiwxaWFBsP69RaNCZ_NTz18T8yl6Cnx6xiwsEPrJFxINrw3RHC5n9Eu-2FToZlrEhIaxeOZHsje0RQ_yCdyRs0BzC5HpwR4gAAAAE1ZEE9AA")
-STRING2 = getenv("STRING_SESSION", "AgDY4YEATvn3sIR0kiN1sOLkAONRhouL-KGZtyDH-EMS-34a_muXwk60pfuL4b-uqq-MniAlll9wQRb2Fc7SVpPILHAxvp38bzLHssWLvSl0O9Evo1BtB9Pki1awykxVgeOjiVJxBaU1ynHkvm_dPhNHhYnOJMDTiqWL0v9O6UMvcpF8OS9OnbQuvsDDE-xCu7lhLMAiQb_sk-wpGYyE9bpzvb89whwUMPp1Zv-03VZZIjPUrcWU-qheggjhD7AiwxaWFBsP69RaNCZ_NTz18T8yl6Cnx6xiwsEPrJFxINrw3RHC5n9Eu-2FToZlrEhIaxeOZHsje0RQ_yCdyRs0BzC5HpwR4gAAAAE1ZEE9AA")
-STRING3 = getenv("STRING_SESSION", "AgDY4YEATvn3sIR0kiN1sOLkAONRhouL-KGZtyDH-EMS-34a_muXwk60pfuL4b-uqq-MniAlll9wQRb2Fc7SVpPILHAxvp38bzLHssWLvSl0O9Evo1BtB9Pki1awykxVgeOjiVJxBaU1ynHkvm_dPhNHhYnOJMDTiqWL0v9O6UMvcpF8OS9OnbQuvsDDE-xCu7lhLMAiQb_sk-wpGYyE9bpzvb89whwUMPp1Zv-03VZZIjPUrcWU-qheggjhD7AiwxaWFBsP69RaNCZ_NTz18T8yl6Cnx6xiwsEPrJFxINrw3RHC5n9Eu-2FToZlrEhIaxeOZHsje0RQ_yCdyRs0BzC5HpwR4gAAAAE1ZEE9AA")
-STRING4 = getenv("STRING_SESSION", "AgDY4YEATvn3sIR0kiN1sOLkAONRhouL-KGZtyDH-EMS-34a_muXwk60pfuL4b-uqq-MniAlll9wQRb2Fc7SVpPILHAxvp38bzLHssWLvSl0O9Evo1BtB9Pki1awykxVgeOjiVJxBaU1ynHkvm_dPhNHhYnOJMDTiqWL0v9O6UMvcpF8OS9OnbQuvsDDE-xCu7lhLMAiQb_sk-wpGYyE9bpzvb89whwUMPp1Zv-03VZZIjPUrcWU-qheggjhD7AiwxaWFBsP69RaNCZ_NTz18T8yl6Cnx6xiwsEPrJFxINrw3RHC5n9Eu-2FToZlrEhIaxeOZHsje0RQ_yCdyRs0BzC5HpwR4gAAAAE1ZEE9AA")
-STRING5 = getenv("STRING_SESSION", "AgDY4YEATvn3sIR0kiN1sOLkAONRhouL-KGZtyDH-EMS-34a_muXwk60pfuL4b-uqq-MniAlll9wQRb2Fc7SVpPILHAxvp38bzLHssWLvSl0O9Evo1BtB9Pki1awykxVgeOjiVJxBaU1ynHkvm_dPhNHhYnOJMDTiqWL0v9O6UMvcpF8OS9OnbQuvsDDE-xCu7lhLMAiQb_sk-wpGYyE9bpzvb89whwUMPp1Zv-03VZZIjPUrcWU-qheggjhD7AiwxaWFBsP69RaNCZ_NTz18T8yl6Cnx6xiwsEPrJFxINrw3RHC5n9Eu-2FToZlrEhIaxeOZHsje0RQ_yCdyRs0BzC5HpwR4gAAAAE1ZEE9AA")
-
-
 BANNED_USERS = filters.user()
 adminlist = {}
 lyrical = {}
